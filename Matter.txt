@@ -1,0 +1,16 @@
+1. Garbage Collection
+---------------------------------------------------------------------------------------------------------------------------------
+Garbage Collection is a form of Automatic Memory Mangement, which tries to reclaim memory which was allocated by the program, but is no longer referenced.
+
+Pros:
+    - No need to Manually deallocate memory.(programmer errors(Dangling pointers, Double free, memory leaks), skill threshold)
+Cons:
+    - Additional Computational time and resources and is overhead.
+    - Less control in hands of programmers sometimes...
+    - The moment of garbage collection(lags, hangs in applications)
+---------------------------------------------------------------------------------------------------------------------------------
+
+2. Garbage Collection Strategies
+---------------------------------------------------------------------------------------------------------------------------------
+# Mark-sweep algorithm
+# Reference counting
