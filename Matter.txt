@@ -25,3 +25,15 @@ Cons:
         - When an object is created and stored in a variable, it is given a value of 1.
         - The value denotes the number of direct references to an object.
         - If an objects value reaches 0, it is called a dead object and the space used by that object is reclaimed.
+---------------------------------------------------------------------------------------------------------------------------------
+
+3. Ownership model in Rust
+---------------------------------------------------------------------------------------------------------------------------------
+Memory management can be done in ways other than Garbage collection or Manual memory management, like the Ownership model used in Rust.
+In this Model, there are some rules to be followed while programming, if not followed, will give compile time errors.
+# Ownership Rules
+    - Each value in Rust has a variable That's called it's owner.
+    - There can only be one owner at a time.
+    - When the owner goes out of scope the value will be dropped.
+
+
