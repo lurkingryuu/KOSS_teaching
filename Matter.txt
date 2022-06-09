@@ -13,4 +13,15 @@ Cons:
 2. Garbage Collection Strategies
 ---------------------------------------------------------------------------------------------------------------------------------
 # Mark-sweep algorithm
+    - It is one of the Garbage collection techniques used by Garbage collectors in Java and is used as a major garbage collector in javascript.
+    - Algorithm
+        - When an object is initialized, it's in an unmarked state.
+        - In Marking Phase, we mark all of the objects which are reachable.
+        - We parse through all objects, if an object is marked, we unmark it, else we free the memory used by that object
+        - We Repeat this process of marking and sweeping
 # Reference counting
+    - It is used in Python
+    - Algorithm
+        - When an object is created and stored in a variable, it is given a value of 1.
+        - The value denotes the number of direct references to an object.
+        - If an objects value reaches 0, it is called a dead object and the space used by that object is reclaimed.
