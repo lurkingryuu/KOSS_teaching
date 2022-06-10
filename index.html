@@ -34,7 +34,7 @@
 					<section data-auto-animate>
 						<h3>Pros:</h3>
 						<ul>
-							<li>No need to Manually deallocate memory.(programmer errors(Dangling pointers, Double free, memory leaks), skill threshold)</li>
+							<li>No need to Manually deallocate memory</li>
 						</ul>
 					</section>
 				
@@ -46,22 +46,22 @@
 					<section data-auto-animate>
 						<h3>Cons:</h3>
 						<ul>
-							<li>Additional Computational time and resources and is overhead.</li>
+							<li>Additional Computational time and resources and is overhead</li>
 						</ul>
 					</section>
 					<section data-auto-animate>
 						<h3>Cons:</h3>
 						<ul>
-							<li>Additional Computational time and resources and is overhead.</li>
+							<li>Additional Computational time and resources and is overhead</li>
 							<li>Less control in hands of programmers sometimes</li>
 						</ul>
 					</section>
 					<section data-auto-animate>
 						<h3>Cons:</h3>
 						<ul>
-							<li>Additional Computational time and resources and is overhead.</li>
+							<li>Additional Computational time and resources and is overhead</li>
 							<li>Less control in hands of programmers sometimes</li>
-							<li>The moment of garbage collection(lags, hangs in applications)</li>
+							<li>Momentary lags and hangs of the application</li>
 						</ul>
 					</section>
 				</section>
@@ -91,29 +91,29 @@
 					<section data-auto-animate>
 						<h4>Algorithm:</h4>
 						<ol>
-							<li>When an object is initialized, it's in an unmarked state.</li>
+							<li>When an object is initialized, it's in an unmarked state</li>
 						</ol>
 					</section>
 					<section data-auto-animate>
 						<h4>Algorithm:</h4>
 						<ol>
-							<li>When an object is initialized, it's in an unmarked state.</li>
-							<li>In Marking Phase, we mark all of the objects which are reachable.</li>
+							<li>When an object is initialized, it's in an unmarked state</li>
+							<li>In Marking Phase, we mark all of the objects which are reachable</li>
 						</ol>
 					</section>
 					<section data-auto-animate>
 						<h4>Algorithm:</h4>
 						<ol>
-							<li>When an object is initialized, it's in an unmarked state.</li>
-							<li>In Marking Phase, we mark all of the objects which are reachable.</li>
+							<li>When an object is initialized, it's in an unmarked state</li>
+							<li>In Marking Phase, we mark all of the objects which are reachable</li>
 							<li>We parse through all objects, if an object is marked, we unmark it, else we free the memory used by that object</li>
 						</ol>
 					</section>
 					<section data-auto-animate>
 						<h4>Algorithm:</h4>
 						<ol>
-							<li>When an object is initialized, it's in an unmarked state.</li>
-							<li>In Marking Phase, we mark all of the objects which are reachable.</li>
+							<li>When an object is initialized, it's in an unmarked state</li>
+							<li>In Marking Phase, we mark all of the objects which are reachable</li>
 							<li>We parse through all objects, if an object is marked, we unmark it, else we free the memory used by that object</li>
 							<li>We Repeat this process of marking and sweeping</li>
 						</ol>
@@ -151,9 +151,9 @@
 					<section data-auto-animate>
 						<h4>Algorithm:</h4>
 						<ol>
-							<li>When an object is created and stored in a variable, it is given a value of 1.</li>
-							<li>The value denotes the number of direct references to an object.</li>
-							<li>If an objects value reaches 0, it is called a dead object and the space used by that object is reclaimed.</li>
+							<li>When an object is created and stored in a variable, it is given a value of 1</li>
+							<li>The value denotes the number of direct references to an objec.</li>
+							<li>If an objects value reaches 0, it is called a dead object and the space used by that object is reclaimed</li>
 						</ol>
 					</section>
 				</section>
@@ -179,22 +179,22 @@
 					<section data-auto-animate>
 						<h3>Ownership Rules</h3>
 						<ul>
-							<li>Each value in Rust has a variable That's called it's owner.</li>
+							<li>Each value in Rust has a variable That's called it's owner</li>
 						</ul>
 					</section>
 					<section data-auto-animate>
 						<h3>Ownership Rules</h3>
 						<ul>
-							<li>Each value in Rust has a variable That's called it's owner.</li>
-							<li>There can only be one owner at a time.</li>
+							<li>Each value in Rust has a variable That's called it's owner</li>
+							<li>There can only be one owner at a time</li>
 						</ul>
 					</section>
 					<section data-auto-animate>
 						<h3>Ownership Rules</h3>
 						<ul>
-							<li>Each value in Rust has a variable That's called it's owner.</li>
-							<li>There can only be one owner at a time.</li>
-							<li>When the owner goes out of scope the value will be dropped.</li>
+							<li>Each value in Rust has a variable That's called it's owner</li>
+							<li>There can only be one owner at a time</li>
+							<li>When the owner goes out of scope the value will be dropped</li>
 						</ul>
 					</section>
 				</section>
