@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Package Management in Linux</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/vs2015.min.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Garbage Collection -->
+				<section>
+					<!-- Intro -->
+					<section data-auto-animate>
+						<h2>Garbage Collection</h2>
+					</section>
+					<section data-auto-animate>
+						<h2>Garbage Collection</h2>
+						<p>It is a form of Automatic Memory Mangement, which reclaims memory which is no longer referenced</p>
+					</section>
+				
+					
+					<!-- Pros of GC -->
+					<section data-auto-animate>
+						<h3>Pros:</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Pros:</h3>
+						<ul>
+							<li>No need to Manually deallocate memory.(programmer errors(Dangling pointers, Double free, memory leaks), skill threshold)</li>
+						</ul>
+					</section>
+				
+					
+					<!-- Cons of GC -->
+					<section data-auto-animate>
+						<h3>Cons:</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Cons:</h3>
+						<ul>
+							<li>Additional Computational time and resources and is overhead.</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<h3>Cons:</h3>
+						<ul>
+							<li>Additional Computational time and resources and is overhead.</li>
+							<li>Less control in hands of programmers sometimes</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<h3>Cons:</h3>
+						<ul>
+							<li>Additional Computational time and resources and is overhead.</li>
+							<li>Less control in hands of programmers sometimes</li>
+							<li>The moment of garbage collection(lags, hangs in applications)</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Garbage Collection Strategies Intro -->
+				<section>
+					<section data-auto-animate>
+						<h2>Garbage Collection Strategies</h2>
+					</section>
+				</section>
+
+				<!-- Mark and sweep algorithm -->
+				<section>
+					<!-- Intro -->
+					<section data-auto-animate>
+						<h3>Mark-sweep Algorithm</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Mark-sweep</h3>
+						<p>It is one of the Garbage collection techniques used in laguages such as Java and Javascript</p>
+					</section>
+
+					<!-- Algorithm -->
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+					</section>
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+						<ol>
+							<li>When an object is initialized, it's in an unmarked state.</li>
+						</ol>
+					</section>
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+						<ol>
+							<li>When an object is initialized, it's in an unmarked state.</li>
+							<li>In Marking Phase, we mark all of the objects which are reachable.</li>
+						</ol>
+					</section>
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+						<ol>
+							<li>When an object is initialized, it's in an unmarked state.</li>
+							<li>In Marking Phase, we mark all of the objects which are reachable.</li>
+							<li>We parse through all objects, if an object is marked, we unmark it, else we free the memory used by that object</li>
+						</ol>
+					</section>
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+						<ol>
+							<li>When an object is initialized, it's in an unmarked state.</li>
+							<li>In Marking Phase, we mark all of the objects which are reachable.</li>
+							<li>We parse through all objects, if an object is marked, we unmark it, else we free the memory used by that object</li>
+							<li>We Repeat this process of marking and sweeping</li>
+						</ol>
+					</section>
+				</section>
+
+				<!-- Reference counting -->
+				<section>
+					<!-- Intro -->
+					<section data-auto-animate>
+						<h3>Reference counting</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Reference counting</h3>
+						It is used in Python
+					</section>
+
+					<!-- Algorithm -->
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+					</section>
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+						<ol>
+							<li>When an object is created and stored in a variable, it is assigned a value of 1</li>
+						</ol>
+					</section>
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+						<ol>
+							<li>When an object is created and stored in a variable, it is assigned a value of 1</li>
+							<li>The value denotes the number of direct references to an object</li>
+						</ol>
+					</section >
+					<section data-auto-animate>
+						<h4>Algorithm:</h4>
+						<ol>
+							<li>When an object is created and stored in a variable, it is given a value of 1.</li>
+							<li>The value denotes the number of direct references to an object.</li>
+							<li>If an objects value reaches 0, it is called a dead object and the space used by that object is reclaimed.</li>
+						</ol>
+					</section>
+				</section>
+
+				<!-- Ownership model in Rust -->
+				<section>
+					<!-- Intro -->
+					<section data-auto-animate>
+						<h1>Ownership model</h1>
+					</section>
+					<section data-auto-animate>
+						<h1>Ownership model</h1>
+						<p>Memory management can be done in ways other than Garbage collection or Manual memory management, like the Ownership model used in Rust</p>
+					</section>
+					<section data-auto-animate>
+						<p>In this Model, there are some rules to be followed while programming, if not followed, will give compile time errors.</p>
+					</section>
+
+					<!-- Rules -->
+					<section data-auto-animate>
+						<h3>Ownership Rules</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Ownership Rules</h3>
+						<ul>
+							<li>Each value in Rust has a variable That's called it's owner.</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<h3>Ownership Rules</h3>
+						<ul>
+							<li>Each value in Rust has a variable That's called it's owner.</li>
+							<li>There can only be one owner at a time.</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<h3>Ownership Rules</h3>
+						<ul>
+							<li>Each value in Rust has a variable That's called it's owner.</li>
+							<li>There can only be one owner at a time.</li>
+							<li>When the owner goes out of scope the value will be dropped.</li>
+						</ul>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				// controls: false,
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
